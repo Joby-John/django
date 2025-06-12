@@ -1,0 +1,36 @@
+
+# list comprehension
+l1 = [x for x in range(101) if x%5 == 0]
+print(l1)
+
+# def getSmaller(l, x):
+#     return [e for e in l<x]
+
+def getSmaller(x):
+    return [e for e in range(10,1,-1) if e<x]
+
+# getSmaller([1,2,3,4,5,6,7,9], 5)
+print(getSmaller(7))
+
+#set comprehension
+list1 = [10, 20, 3, 4, 10, 20, 7, 3]
+s1 = {x for x in list1 if(x%2)}
+s2 = {x for x in list1 if(x%2 == 0)}
+
+print(s1)
+print(s2)
+
+#dictionary comprehension
+d1 = {x:x**3 for x in list1}
+print(d1)
+
+l1 = [101, 102, 103]
+l2 = ["Anna", "Anno", "Annu"]
+d2 = {l1[i]:l2[i] for i in range (len(l1))}
+d3 = dict(zip(l1, l2))
+print(d2)
+print(d3)
+
+#reverse mapping of dictonaries
+d4 = {v:k for (k, v) in d2.items()}
+print(d4)
